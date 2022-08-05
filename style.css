@@ -378,7 +378,7 @@ h1 {
   color: #000;
 }
 
-.owl-carousel1 .owl-nav .owl-prev,
+/* .owl-carousel1 .owl-nav .owl-prev,
 .owl-carousel1 .owl-nav .owl-next {
   position: absolute;
   top: -20%;
@@ -398,7 +398,7 @@ h1 {
 
 .owl-carousel1 .owl-nav .owl-next {
   right: 0;
-}
+} */
 
 /*--------rooms---------*/
 /*--------gallery---------*/
@@ -415,7 +415,7 @@ h1 {
   position: relative;
 }
 
-.gallery .img::after {
+/* .gallery .img::after {
   content: '';
   position: absolute;
   top: 0;
@@ -426,7 +426,7 @@ h1 {
   z-index: 2;
   opacity: 0;
   transition: 0.5s;
-}
+} */
 
 .overlay {
   position: absolute;
@@ -453,11 +453,11 @@ h1 {
   font-weight: 500;
 }
 
-.gallery .items:hover .overlay,
+/* .gallery .items:hover .overlay,
 .gallery .items:hover .img::after {
   opacity: 1;
   cursor: pointer;
-}
+} */
 
 .gallery .owl-nav .owl-prev {
   left: 85%;
@@ -748,6 +748,9 @@ footer label {
 
 .legal {
   padding: 15px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background: #0b0b0d;
   color: #b6b7b9;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
