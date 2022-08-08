@@ -913,3 +913,9 @@ footer label {
 #toggle{
   color: #fff;
 }
+
+a{
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
