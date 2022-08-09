@@ -30,11 +30,10 @@
         <ul id="menulist">
           <li><a href="#home">home</a> </li>
           <li><a href="#about">about</a> </li>
-          <li><a href="#rooms">rooms</a> </li>
-          <!-- <li><a href="#pages">pages</a> </li> -->
-          <!-- <li><a href="#news">news</a> </li> -->
+          <li><a href="#rooms">rooms</a> </li> 
+          <li><a href="#gym">shape-up gym</a> </li>         
           <li><a href="#contact">contact</a> </li>
-          <li> <i class="fa fa-search"></i> </li>
+          <!-- <li> <i class="fa fa-search"></i> </li> -->
           <li> <a href="#rooms"><button class="primary-btn">BOOK NOW</button></a></li>
         </ul>
         <span class="fa fa-bars" id="toggle" onclick="menutoggle()"></span>
@@ -67,8 +66,9 @@
             <p>Enjoy Luxurious Stay with a best-in-class service and luxurious accommodations.
             </p>
             <div class="flex">
-              <button class="primary-btn">READ MORE</button>
-              <button class="secondary-btn">CONTACT US</button>
+      
+              <a href="#about"><button class="primary-btn">READ MORE</button></a>
+              <a href="#contact"><button class="secondary-btn">CONTACT US</button></a>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@
           <input type="date" placeholder="Departure Date">
           <input type="number" placeholder="Adults">
           <input type="number" placeholder="Childern">
-          <input type="submit" value="CHECK AVAILABILITY">
+          <input type="submit" value="Book Now">
         </form>
       </div>
     </div>
@@ -167,7 +167,7 @@
           <h2>Royal Cliff</h2>
         </div>
         <p>We host a team of highly proficient people who have a passion for hospitality and customer service. With an immense attention to detail, at Royal Cliff hotels and Restaurants, we offer a wide range of modern and traditional cuisine with an inhouse fitness facility. Let's create unforgettable memories together.</p>
-        <button class="primary-btn">ABOUT US</button>
+        <!-- <button class="primary-btn">ABOUT US</button> -->
       </div>
       <div class="right">
         <img src="images/aboutimg.jpg" alt="">
@@ -231,7 +231,7 @@
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
-                <h3>₹4,500 <span> <br> Per Night </span> </h3>
+                <h3>₹4,500 <span id="per_night"> <br> Per Night </span> </h3>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
-                <h3>₹5,000 <span> <br> Per Night </span> </h3>
+                <h3>₹5,000 <span id="per_night"> <br> Per Night </span> </h3>
               </div>
             </div>
           </div>
@@ -273,7 +273,7 @@
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
-                <h3>₹9,000 <span> <br> Per Night </span> </h3>
+                <h3>₹9,000 <span id="per_night"> <br> Per Night </span> </h3>
               </div>
             </div>
           </div>
@@ -294,7 +294,7 @@
               </p>
               <div class="button flex">
                 <button class="primary-btn">BOOK NOW</button>
-                <h3>₹10,000 <span> <br> Per Night </span> </h3>
+                <h3>₹10,000 <span id="per_night"> <br> Per Night </span> </h3>
               </div>
             </div>
           </div>
@@ -307,8 +307,11 @@
     $('.owl-carousel1').owlCarousel({
       loop: true,
       margin: 40,
-      nav: true,
+      nav: false,
       dots: false,
+      autoplay: true,
+      autoplayTimeout: 1000,
+      autoplayHoverPause: true,
       navText: ["<i class = 'fa fa-chevron-left'></i>", "<i class = 'fa fa-chevron-right'></i>"],
       responsive: {
         0: {
@@ -472,13 +475,13 @@
           <div class="box">
             <div class="text">
               <i class="fa-solid fa-champagne-glasses"></i>
-              <h3>Delious Food</h3>
+              <h3>Delicious Food</h3>
             </div>
           </div>
           <div class="box">
             <div class="text">
               <i class="fa-solid fa-person-biking"></i>
-              <h3>Fintness</h3>
+              <h3>Fitness</h3>
             </div>
           </div>
           <div class="box">
@@ -502,7 +505,7 @@
   </section>
 
 
-  <section class="about top">
+  <section class="about top" id="gym">
     <div class="container flex">
       <div class="left">
         <div class="heading">
@@ -511,7 +514,7 @@
         </div>
         <p>The Royal cliff group of hotels has a gym in the same premises by the name of shape up gold gym. The Shape up Gold Gym has been a fixture in the local community for years. It's a state-of-the-art gym which is well equipped with all the modern fitness equipment catering to your every fitness need and has an array of highly proficient and qualified gym trainers. Our workout programs are tailored to help you achieve your fitness goals, and to keep you motivated along every step of the way. If you're looking to get in your desired shape, we are just the place for you. 
           The gym comes as a complimentary offering to all our hotel visitors which can be used free-of-cost.</p>
-        <button class="primary-btn">Explore More</button>
+        <!-- <button class="primary-btn">Explore More</button> -->
       </div>
       <div class="right">
         <!-- <img src="images/Shape Up Small.mp4" alt=""> -->
@@ -570,19 +573,20 @@
     })
   </script>
 
-  <section class="newsletter mtop">
+  <!-- <section class="newsletter mtop">
     <div class="container flex_space">
       <h1>Subscribe to Our Newsletter</h1>
       <input type="text" placeholder="Your Email">
       <input type="text" value="Subscribe">
     </div>
-  </section>
+  </section> -->
 
 
   <footer id="contact">
     <div class="container grid">
       <div class="box">
        <b> Royal Cliff</b>
+       <br>
         
         <br>
         <!-- <img src="images/logo-2.png" alt=""> -->
@@ -593,19 +597,19 @@
         <div class="icon">
          <a href="https://www.facebook.com/royalcliffnagpur"><i class="fa fa-facebook-f"></i></a>
          <a href=" https://www.instagram.com/royalcliff_nagpur/"><i class="fa fa-instagram"></i></a>
-          <a href=""><i class="fa fa-twitter"></i></a>
-          <a href=""><i class="fa fa-youtube"></i></a>
+          <!-- <a href=""><i class="fa fa-twitter"></i></a>
+          <a href=""><i class="fa fa-youtube"></i></a> -->
         </div>
       </div>
 
       <div class="box">
         <h2>Links</h2>
         <ul>
-          <li>Company History</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Services</li>
-          <li>Privacy Policy</li>
+          <a href="#home"><li>Home</li></a>
+          <a href="#about"><li>About Us</li></a>
+          <a href="#rooms"><li>Rooms</li></a>
+          <a href="#gym"><li>Shape-Up Gym</li></a>
+          <a href="#contact"><li>Contact Us</li></a>
         </ul>
       </div>
 
@@ -627,7 +631,7 @@
   </footer>
 
   <div class="legal">
-    <p class="container">Designed and Developed <a href="">Atharva Pandhare</a>  
+    <p class="container">Designed and Developed <a href="https://atharva-pandhare.netlify.app/">Atharva Pandhare</a>  
       (Unibuzz Solutions)
     </p>
   </div>
