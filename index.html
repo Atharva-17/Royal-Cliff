@@ -254,7 +254,7 @@ We offer impeccable service and all the essential amenities to travellers.
         <div class="owl-carousel owl-carousel1 owl-theme">
           <div class="items">
             <div class="image">
-              <img src="images/room-std.jpg" alt="">
+              <img src="images/std.png" alt="">
             </div>
             <div class="text">
               <h2>Standard Rooms</h2>
@@ -275,7 +275,7 @@ We offer impeccable service and all the essential amenities to travellers.
           </div>
           <div class="items">
             <div class="image">
-              <img src="images/room-club.jpg" alt="">
+              <img src="images/club1.png" alt="">
             </div>
             <div class="text">
               <h2>Club Rooms</h2>
@@ -296,7 +296,7 @@ We offer impeccable service and all the essential amenities to travellers.
           </div>
           <div class="items">
             <div class="image">
-              <img src="images/room-family.jpg" alt="">
+              <img src="images/family.jpg" alt="">
             </div>
             <div class="text">
               <h2>Family Suites</h2>
@@ -317,7 +317,7 @@ We offer impeccable service and all the essential amenities to travellers.
           </div>
           <div class="items">
             <div class="image">
-              <img src="images/room-presidential.jpg" alt="">
+              <img src="images/president.png" alt="">
             </div>
             <div class="text">
               <h2>Presidential Suites</h2>
@@ -510,25 +510,25 @@ We offer impeccable service and all the essential amenities to travellers.
 
       <div class="content flex_space">
         <div class="left grid2">
-          <div class="box">
+          <div class="box" onclick="changeImage1()" >
             <div class="text">
               <i class="fa-solid fa-champagne-glasses"></i>
               <h3>Delicious Food</h3>
             </div>
           </div>
-          <div class="box">
+          <div class="box" onclick="changeImage3()">
             <div class="text">
               <i class="fa-solid fa-person-biking"></i>
               <h3>Fitness</h3>
             </div>
           </div>
-          <div class="box">
+          <div class="box" onclick="changeImage2()">
             <div class="text">
               <i class="fa-solid fa-utensils"></i>
               <h3>Inhouse Restaurant</h3>
             </div>
           </div>
-          <div class="box">
+          <div class="box" onclick="changeImage4()">
             <div class="text">
               <i class="fa-solid fa-spa"></i>
               <h3>Party Lawn</h3>
@@ -536,11 +536,49 @@ We offer impeccable service and all the essential amenities to travellers.
           </div>
         </div>
         <div class="right">
-          <img src="images/lobby.jpg" alt="">
+          <img id="right" src="images/lobby.jpg" alt="">
         </div>
       </div>
     </div>
   </section>
+  <script>
+    function changeImage1(){
+      let displayImage=document.getElementById('right')
+      if(displayImage.src.match('./Images/food1.jpg')){
+        displayImage.src='./Images/food2.jpg'
+      }
+      else{
+        displayImage.src='./Images/food1.jpg'
+      }
+    }
+    function changeImage2(){
+      let displayImage=document.getElementById('right')
+      if(displayImage.src.match('./Images/rest1.jpg')){
+        displayImage.src='./Images/rest2.jpg'
+      }
+      else{
+        displayImage.src='./Images/rest1.jpg'
+      }
+    }
+    function changeImage3(){
+      let displayImage=document.getElementById('right')
+      if(displayImage.src.match('./Images/fit1.jpg')){
+        displayImage.src='./Images/fit2.jpg'
+      }
+      else{
+        displayImage.src='./Images/fit1.jpg'
+      }
+    }
+    function changeImage4(){
+      let displayImage=document.getElementById('right')
+      if(displayImage.src.match('./Images/lawn1.jpg')){
+        displayImage.src='./Images/lawn2.jpg'
+      }
+      else{
+        displayImage.src='./Images/lawn1.jpg'
+      }
+    }
+  </script>
 
 
   <section class="about top" id="gym">
