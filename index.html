@@ -656,7 +656,100 @@ We offer impeccable service and all the essential amenities to travellers.
       <input type="text" value="Subscribe">
     </div>
   </section> -->
+   
+  <div class="container1">
+    <!-- <span class="big-circle"></span> -->
+    <!-- <img src="img/shape.png" class="square" alt="" /> -->
+    <div class="form1">
+      <div class="contact-info1">
+        <h3 class="title1">Let's get in touch</h3>
+        <p class="text1">
+          Enjoy Luxurious Stay with a best-in-class service and luxurious accommodations. 
+          Our hotels and resorts are a great option for hosting large as well as small-sized group events and parties.
+        </p>
 
+        <div class="info1">
+          <div class="information1">
+            <i class="fa-sharp fa-solid fa-map-location-dot i-icon"></i>
+
+            <p id="para"> Plot No.1, Lifespace, Sangarsh Nagar Square, Wathoda Ring Road, Beside Swaminarayan Temple, Nagpur - 440008</p>
+          </div>
+          <div class="information1">
+            <i class="fa-sharp fa-solid fa-envelope i-icon"></i>
+
+            <p id="para"> info@royalcliff.in</p>
+          </div>
+          <div class="information1">
+            <i class="fa-sharp fa-solid fa-phone i-icon"></i>
+            <p id="para">7797595959, 7797393939</p>
+          </div>
+        </div>
+
+        <div class="social-media1">
+          <p>Connect with us :</p>
+          <div class="social-icons1">
+            <a href="https://www.facebook.com/royalcliffnagpur">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/royalcliff_nagpur/">
+              <i class="fab fa-instagram"></i>
+            </a>
+      
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form1">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form onsubmit="sendEmail(); reset(); return false;" autocomplete="off">
+          <h3 class="title1">Contact us</h3>
+          <div class="input-container1">
+            <input id="name" type="text" name="name" placeholder="Name" class="input1" required />
+            <!-- <label for="">Name</label>
+            <span>Name</span> -->
+          </div>
+          <div class="input-container1">
+            <input id="email" type="email" name="email" placeholder="Email" class="input1" required />
+            <!-- <label for="">Email</label>
+            <span>Email</span> -->
+          </div>
+          <div class="input-container1">
+            <input id="phone" type="tel" name="phone" placeholder="Phone Number" class="input1" required />
+            <!-- <label for="">Phone Number</label>
+            <span>Phone Number</span> -->
+          </div>
+          <div class="input-container1 textarea">
+            <textarea id="message" name="message" placeholder="How can we help you?" class="input1"></textarea>
+            <!-- <label for="">How can we help you?</label>
+            <span>How can we help you?</span> -->
+          </div>
+          <input type="submit" value="Send" class="btn1" />
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+      Email.send({
+    Host : "smtp.gmail.com",
+    Username : "atharvamanish100@gmail.com",
+    Password : "Atharva@786",
+    To : 'atharvapandhare@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body : "Name: " + document.getElementById("name").value
+        + "<br> Email: " + document.getElementById("email").value
+        + "<br> Phone Number: " + document.getElementById("phone").value
+        + "<br> Message: " + document.getElementById("message").value
+}).then(
+  message => alert("Message Sent Successfully")
+);
+    }
+  </script>
 
   <footer id="contact">
     <div class="container grid">
@@ -713,8 +806,9 @@ We offer impeccable service and all the essential amenities to travellers.
   </div>
 
 
-
+  <script src="./index.js"></script>
   <script src="https://kit.fontawesome.com/032d11eac3.js" crossorigin="anonymous"></script>
+  
 </body>
 
 </html>
